@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const pool = require("../db.js");
 
+//The basic CRUD operations are done here
+//We are able to query the pool object because there is an exposed method on it that allows us to.
+//When we query the pool, we write SQL, so it is not an ORM
+
 //get all todos
 router.get("/", async (req, res, next) => {
   console.log("Query..");
